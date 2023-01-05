@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pneumonia X-Ray Prediction</title>
+        <style>
+            h1{text-align: center;}
+            body {
+                background-image:linear-gradient(#4568dc, #b06ab3);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <b>
+                <font size=15>Pneumonia X-Ray Prediction</font>
+            </b>
+        </h1>
+        <h2>Upload an image to predict!</h2>
+        <form action="/", method="post", enctype="multipart/form-data">
+            Upload image: <input type="file" name="imagefile">
+            <p><input type="submit" value="Predict Image"></p>
+        </form>
+        <img src="{{ user_image }}" height="280px" width="400px">
+        <p>
+            <h2>
+                <b>{{ prediction_text }}</b>
+            </h2>
+        </p>
+    </body>
+</html>
